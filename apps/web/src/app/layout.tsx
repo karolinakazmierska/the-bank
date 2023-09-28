@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
+import { ClerkProvider } from '@clerk/nextjs'
 
 import { ThemeProvider } from "~/components/ThemeProvider";
 
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 
 export default function Layout(props: { children: React.ReactNode }) {
   return (
+    <ClerkProvider>
     <html
       lang="en"
       className={`${roboto_mono.variable} font-mono`}
@@ -35,5 +37,6 @@ export default function Layout(props: { children: React.ReactNode }) {
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
