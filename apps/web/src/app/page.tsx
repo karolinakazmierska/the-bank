@@ -1,7 +1,11 @@
 export default function HomePage() {
   return (
-    <main className="flex h-screen flex-1 flex-col items-center justify-center bg-gray-800">
-      <h1 className="text-7xl text-gray-300">👋 Hello!</h1>
+    <main className="flex h-screen flex-1 flex-row items-center justify-around bg-gray-800">
+      <div className="border-r-2 grow text-center text-white">
+        <p className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">The Bank</p>
+        <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-600">Today, tomorrow, in the future</p>
+      </div>
+      <div className="grow text-center text-white">by Karolina</div>
     </main>
   );
 }
